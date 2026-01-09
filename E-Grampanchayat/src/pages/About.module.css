@@ -1,0 +1,171 @@
+/* Hero Section */
+.hero {
+    background: url("/images/Logo4.jpeg") center/cover no-repeat;
+    padding: 100px 20px;
+    position: relative;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c5f2d; /* Deep Green */
+  font-family: 'Garamond', serif;
+  background: linear-gradient(to right, rgba(212, 237, 218, 0.7), rgba(255, 255, 255, 0.7)); /* Increased transparency */
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  }
+  
+  /* About Content */
+  .aboutContent {
+    background: #f8f9fa;
+    padding: 60px 20px;
+  }
+  
+  .heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: "Garamond", serif;
+  }
+  
+  .text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Achievements Timeline */
+  .achievements {
+    text-align: center;
+  }
+  
+  .timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .timeline li {
+    background: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid #007bff;
+    position: relative;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .timeline li:hover {
+    transform: scale(1.05);
+  }
+  
+  .timeline h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .timeline p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Call to Action */
+  .cta {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    padding: 80px 20px;
+  }
+  
+  .cta h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .cta p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-left {
+    animation: slideLeft 1s ease-in-out;
+  }
+  
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-right {
+    animation: slideRight 1s ease-in-out;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 1s ease-in-out;
+  }
+  

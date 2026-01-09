@@ -1,0 +1,45 @@
+/* Admin Navbar Styles */
+.adminNavbar {
+    background: #1e1e2f;
+    color: white;
+    padding: 15px 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .adminNavbar h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .logo {
+ 
+    width: 80px;
+    height: auto;
+  
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+  .adminNavLinks {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .adminNavLinks a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .adminNavLinks a:hover {
+    color: #ffcc00;
+  }
+  
+  
+  

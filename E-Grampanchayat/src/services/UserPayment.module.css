@@ -1,0 +1,55 @@
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+.paymentBox {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.qrImage {
+  width: 240px;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 15px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #357edd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #245bb5;
+}
+
+.statusText {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -1,0 +1,27 @@
+package com.example.E_Grampanchayat.model;
+
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+public class MarriageCertificate {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Long userId;
+
+    private String groomName;
+    private String brideName;
+    private LocalDate dateOfMarriage;
+    private LocalDate applicationDate;
+    private String status; // PENDING, APPROVED, REJECTED
+
+    @Lob
+    private byte[] certificateFile;
+
+    private String certificateFileName;
+
+    // Getters and Setters
+}

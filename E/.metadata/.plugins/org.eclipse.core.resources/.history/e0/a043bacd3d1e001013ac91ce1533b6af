@@ -1,0 +1,5 @@
+package com.example.E_Grampanchayat.model;
+
+public class Payment {
+
+}

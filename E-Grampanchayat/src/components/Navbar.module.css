@@ -1,0 +1,64 @@
+.navbar {
+  font-size: 1rem;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays above other elements */
+  background-color: #007bff !important; /* Navbar background */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.navLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.navItem {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navItem:hover {
+  color: #ffcc00 !important;
+}
+
+.dropdownMenu {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdownItem {
+  font-weight: 500;
+}
+
+.authButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.loginBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.registerBtn {
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  border: none;
+}
+
+.registerBtn:hover {
+  background: linear-gradient(to right, #ff9900, #ff6600);
+}

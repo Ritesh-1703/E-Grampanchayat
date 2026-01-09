@@ -1,0 +1,26 @@
+package com.example.E_Grampanchayat.model;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+import java.time.LocalDate;
+
+@Entity
+@Data
+public class Payment {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Long userId;
+    private String purpose; // tax, fee, etc.
+    private Double amount;
+    private String status; // PENDING, APPROVED, REJECTED
+    private LocalDate paymentDate;
+
+    @Lob
+    private byte[] screenshot;
+
+    private String screenshotName;
+}

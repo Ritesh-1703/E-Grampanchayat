@@ -1,0 +1,26 @@
+.footer {
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+  }
+  
+  .footer i {
+    transition: 0.3s;
+  }
+  
+  .footer i:hover {
+    transform: scale(1.2);
+  }
+  
