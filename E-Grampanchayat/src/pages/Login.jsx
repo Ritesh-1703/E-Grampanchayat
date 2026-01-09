@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
