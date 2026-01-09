@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import Navbar from "../components/Navbar";
+<<<<<<< HEAD
+=======
+
+>>>>>>> a0c0555e9ad66ca5a5efc3050dda1def258b842a
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
