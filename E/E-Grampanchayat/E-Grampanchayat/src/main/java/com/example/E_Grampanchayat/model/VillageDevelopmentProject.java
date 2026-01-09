@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class VillageDevelopmentProject {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int project_id;
 
 	private String project_name;
