@@ -129,7 +129,6 @@ const Registration = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
