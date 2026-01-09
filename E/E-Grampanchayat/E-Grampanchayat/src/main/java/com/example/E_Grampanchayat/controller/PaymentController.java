@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/payments")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://e-grampanchayat-gamma.vercel.app")
 public class PaymentController {
 
     @Autowired
@@ -26,8 +26,7 @@ public class PaymentController {
             @RequestParam Long userId,
             @RequestParam String purpose,
             @RequestParam Double amount,
-            @RequestParam("screenshot") MultipartFile screenshot
-    ) {
+            @RequestParam("screenshot") MultipartFile screenshot) {
         try {
             Payment payment = new Payment();
             payment.setUserId(userId);

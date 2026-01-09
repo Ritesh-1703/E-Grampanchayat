@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/birth-certificates")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "https://e-grampanchayat-gamma.vercel.app", allowCredentials = "true")
 public class BirthCertificateController {
 
     @Autowired
@@ -47,8 +47,7 @@ public class BirthCertificateController {
                 id,
                 file.getBytes(),
                 file.getOriginalFilename(),
-                file.getContentType()
-        ));
+                file.getContentType()));
     }
 
     @GetMapping("/{id}/download")

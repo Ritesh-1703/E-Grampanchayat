@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/directory")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("https://e-grampanchayat-gamma.vercel.app")
 public class DirectoryController {
 
     @Autowired

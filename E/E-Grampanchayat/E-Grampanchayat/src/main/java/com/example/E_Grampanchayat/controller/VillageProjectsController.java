@@ -1,6 +1,5 @@
 package com.example.E_Grampanchayat.controller;
 
-
 import org.springframework.web.bind.annotation.*;
 
 import com.example.E_Grampanchayat.exception.ProjectNotFoundException;
@@ -11,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("https://e-grampanchayat-gamma.vercel.app")
 public class VillageProjectsController {
 
     private final VillageProjectRepository repository;
@@ -31,7 +30,8 @@ public class VillageProjectsController {
     }
 
     @PutMapping("/{id}")
-    public VillageDevelopmentProject updateProjectStatus(@PathVariable int id, @RequestBody VillageDevelopmentProject updatedProject) {
+    public VillageDevelopmentProject updateProjectStatus(@PathVariable int id,
+            @RequestBody VillageDevelopmentProject updatedProject) {
         return repository.findById(id).map(project -> {
             project.setStatus(updatedProject.getStatus());
             project.setActual_budget(updatedProject.getActual_budget());
@@ -41,7 +41,8 @@ public class VillageProjectsController {
 
     @DeleteMapping("/{id}")
     public void deleteProject(@PathVariable int id) {
-        if (!repository.existsById(id)) throw new ProjectNotFoundException(id);
+        if (!repository.existsById(id))
+            throw new ProjectNotFoundException(id);
         repository.deleteById(id);
     }
 }

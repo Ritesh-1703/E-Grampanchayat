@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/marriage-certificates")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://e-grampanchayat-gamma.vercel.app")
 public class MarriageCertificateController {
 
     @Autowired
@@ -45,7 +45,8 @@ public class MarriageCertificateController {
     }
 
     @PostMapping("/{id}/upload")
-    public ResponseEntity<?> uploadCertificate(@PathVariable Long id, @RequestParam MultipartFile file) throws IOException {
+    public ResponseEntity<?> uploadCertificate(@PathVariable Long id, @RequestParam MultipartFile file)
+            throws IOException {
         MarriageCertificate cert = repo.findById(id).orElseThrow(() -> new MarriageCertificateNotFoundException(id));
         cert.setCertificateFile(file.getBytes());
         cert.setCertificateFileName(file.getOriginalFilename());
@@ -56,8 +57,8 @@ public class MarriageCertificateController {
     public ResponseEntity<byte[]> download(@PathVariable Long id) {
         MarriageCertificate cert = repo.findById(id).orElseThrow(() -> new MarriageCertificateNotFoundException(id));
         return ResponseEntity.ok()
-            .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + cert.getCertificateFileName())
-            .contentType(MediaType.APPLICATION_PDF)
-            .body(cert.getCertificateFile());
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + cert.getCertificateFileName())
+                .contentType(MediaType.APPLICATION_PDF)
+                .body(cert.getCertificateFile());
     }
 }

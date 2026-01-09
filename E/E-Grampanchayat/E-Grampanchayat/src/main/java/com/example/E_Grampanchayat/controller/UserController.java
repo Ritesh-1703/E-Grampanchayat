@@ -11,7 +11,7 @@ import com.example.E_Grampanchayat.model.User;
 import com.example.E_Grampanchayat.repository.UserRepository;
 
 @RestController
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("https://e-grampanchayat-gamma.vercel.app")
 public class UserController {
 
     @Autowired
@@ -54,8 +54,7 @@ public class UserController {
                     loggedInUser.getEmail(),
                     loggedInUser.getPhone(),
                     loggedInUser.getAddress(),
-                    loggedInUser.getRole()
-            ));
+                    loggedInUser.getRole()));
         } else {
             return ResponseEntity.status(401).body("Invalid email or password");
         }
