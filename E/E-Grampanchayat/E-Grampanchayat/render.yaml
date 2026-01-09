@@ -1,0 +1,35 @@
+# backend/render.yaml
+databases:
+  - name: egrampanchayat-mysql
+    databaseName: egrampanchayat
+    user: appuser
+    plan: free
+    region: oregon  # or singapore, frankfurt
+
+services:
+  - type: web
+    name: egram-backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    region: oregon
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: egrampanchayat-mysql
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        value: appuser
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: egrampanchayat-mysql
+          property: password
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
+      - key: FRONTEND_URL
+        value: https://e-gram-frontend.onrender.com
+    healthCheckPath: /api/health
+    autoDeploy: true
