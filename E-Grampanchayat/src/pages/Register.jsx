@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Registration.module.css";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const Registration = () => {
   const [formData, setFormData] = useState({
