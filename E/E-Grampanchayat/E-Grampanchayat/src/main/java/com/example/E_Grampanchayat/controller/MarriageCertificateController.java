@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/marriage-certificates")
-@CrossOrigin(origins = "https://e-grampanchayat-gamma.vercel.app")
+@CrossOrigin(origins = "e-grampanchayat-p1j6a98wn-ritesh-dhamales-projects.vercel.app")
 public class MarriageCertificateController {
 
     @Autowired

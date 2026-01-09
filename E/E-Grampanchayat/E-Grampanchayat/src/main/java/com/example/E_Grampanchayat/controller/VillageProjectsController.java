@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/projects")
-@CrossOrigin("https://e-grampanchayat-gamma.vercel.app")
+@CrossOrigin("e-grampanchayat-p1j6a98wn-ritesh-dhamales-projects.vercel.app")
 public class VillageProjectsController {
 
     private final VillageProjectRepository repository;

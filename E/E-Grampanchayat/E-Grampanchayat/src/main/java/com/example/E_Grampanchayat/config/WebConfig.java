@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOriginPatterns("https://e-grampanchayat-gamma.vercel.app",
-                        "https://e-grampanchayat-oe504ajev-ritesh-dhamales-projects.vercel.app", // ADD THIS
+                        "https://e-grampanchayat-p1j6a98wn-ritesh-dhamales-projects.vercel.app", // ADD THIS
                         "https://e-grampanchayat-git-main-ritesh-dhamales-projects.vercel.app") // ADD THIS) // ✅
                                                                                                 // Updated
                 .allowedMethods("GET", "POST", "PUT", "DELETE")

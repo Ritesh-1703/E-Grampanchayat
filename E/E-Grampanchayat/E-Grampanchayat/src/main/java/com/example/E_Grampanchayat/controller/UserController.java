@@ -11,7 +11,7 @@ import com.example.E_Grampanchayat.model.User;
 import com.example.E_Grampanchayat.repository.UserRepository;
 
 @RestController
-@CrossOrigin("https://e-grampanchayat-gamma.vercel.app")
+@CrossOrigin("e-grampanchayat-p1j6a98wn-ritesh-dhamales-projects.vercel.app")
 public class UserController {
 
     @Autowired

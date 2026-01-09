@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/payments")
-@CrossOrigin(origins = "https://e-grampanchayat-gamma.vercel.app")
+@CrossOrigin(origins = "e-grampanchayat-p1j6a98wn-ritesh-dhamales-projects.vercel.app")
 public class PaymentController {
 
     @Autowired

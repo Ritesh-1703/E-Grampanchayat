@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/birth-certificates")
-@CrossOrigin(origins = "https://e-grampanchayat-gamma.vercel.app", allowCredentials = "true")
+@CrossOrigin(origins = "e-grampanchayat-p1j6a98wn-ritesh-dhamales-projects.vercel.app", allowCredentials = "true")
 public class BirthCertificateController {
 
     @Autowired
