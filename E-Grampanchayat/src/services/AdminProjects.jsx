@@ -23,7 +23,7 @@ function AdminProjects() {
   }, []);
 
   const fetchProjects = () => {
-    fetch("http://localhost:8082/api/projects")
+    fetch("https://e-grampanchayat-jufy.onrender.com/api/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data))
       .catch((error) => toast.error("Error fetching projects"));
@@ -39,7 +39,7 @@ function AdminProjects() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8082/api/projects", {
+    fetch("https://e-grampanchayat-jufy.onrender.com/api/projects", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -62,7 +62,7 @@ function AdminProjects() {
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this project?")) {
-      fetch(`http://localhost:8082/api/projects/${id}`, {
+      fetch(`https://e-grampanchayat-jufy.onrender.com/api/projects/${id}`, {
         method: "DELETE",
       })
         .then(() => {
@@ -74,11 +74,14 @@ function AdminProjects() {
   };
 
   const handleStatusChange = (id, newStatus) => {
-    fetch(`http://localhost:8082/api/projects/${id}/status`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ status: newStatus }),
-    })
+    fetch(
+      `https://e-grampanchayat-jufy.onrender.com/api/projects/${id}/status`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus }),
+      }
+    )
       .then(() => {
         toast.success("Status updated successfully");
         fetchProjects();

@@ -8,7 +8,7 @@ function Project() {
   const [filterStatus, setFilterStatus] = useState("All");
 
   useEffect(() => {
-    fetch("http://localhost:8082/api/projects")
+    fetch("https://e-grampanchayat-jufy.onrender.com/api/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);

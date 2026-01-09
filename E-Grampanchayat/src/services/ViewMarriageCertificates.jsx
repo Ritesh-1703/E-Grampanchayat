@@ -11,7 +11,7 @@ const ViewMarriageCertificates = () => {
     const userId = Number(localStorage.getItem("user_id"));
     try {
       const res = await axios.get(
-        `http://localhost:8082/api/marriage-certificates/user/${userId}`
+        `https://e-grampanchayat-jufy.onrender.com/api/marriage-certificates/user/${userId}`
       );
       setCertificates(res.data);
     } catch (err) {

@@ -10,7 +10,7 @@ const ViewDeathCertificates = ({ userId }) => {
   const fetch = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8082/api/death-certificates/user/${userId}`
+        `https://e-grampanchayat-jufy.onrender.com/api/death-certificates/user/${userId}`
       );
       setCertificates(res.data);
     } catch (err) {

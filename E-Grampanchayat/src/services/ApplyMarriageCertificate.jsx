@@ -19,7 +19,7 @@ const ApplyMarriageCertificate = () => {
     const userId = Number(localStorage.getItem("user_id"));
     try {
       await axios.post(
-        "http://localhost:8082/api/marriage-certificates/apply",
+        "https://e-grampanchayat-jufy.onrender.com/api/marriage-certificates/apply",
         {
           ...formData,
           userId,

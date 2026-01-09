@@ -39,7 +39,7 @@ const ApplyCertificate = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:8082/api/birth-certificates/apply",
+        "https://e-grampanchayat-jufy.onrender.com/api/birth-certificates/apply",
         formData
       );
       alert("Application submitted successfully!");

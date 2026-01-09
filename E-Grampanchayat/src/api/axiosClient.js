@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: "http://localhost:8082/api",
+    baseURL: "https://e-grampanchayat-jufy.onrender.com",
     headers: {
         "Content-Type": "application/json",
     },

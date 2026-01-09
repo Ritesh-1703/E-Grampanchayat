@@ -13,7 +13,7 @@ const ViewCertificates = () => {
     try {
       const userId = Number(localStorage.getItem("user_id"));
       const response = await axios.get(
-        `http://localhost:8082/api/birth-certificates/user/${userId}`
+        `https://e-grampanchayat-jufy.onrender.com/api/birth-certificates/user/${userId}`
       );
       setCertificates(response.data);
     } catch (error) {

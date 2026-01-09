@@ -19,7 +19,7 @@ function AdminDirectory() {
   }, []);
 
   const fetchDirectory = () => {
-    fetch("http://localhost:8082/api/directory")
+    fetch("https://e-grampanchayat-jufy.onrender.com/api/directory")
       .then((res) => res.json())
       .then((data) => setDirectory(data))
       .catch((error) => console.error("Error fetching directory:", error));
@@ -31,7 +31,9 @@ function AdminDirectory() {
       return;
     }
     if (window.confirm("Are you sure you want to delete this entry?")) {
-      fetch(`http://localhost:8082/api/directory/${id}`, { method: "DELETE" })
+      fetch(`https://e-grampanchayat-jufy.onrender.com/api/directory/${id}`, {
+        method: "DELETE",
+      })
         .then(() => {
           alert("Entry deleted successfully");
           fetchDirectory();
@@ -50,7 +52,7 @@ function AdminDirectory() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8082/api/directory", {
+    fetch("https://e-grampanchayat-jufy.onrender.com/api/directory", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -82,11 +84,14 @@ function AdminDirectory() {
 
   const handleUpdate = () => {
     if (!editData) return;
-    fetch(`http://localhost:8082/api/directory/${editData.directoryId}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(editData),
-    })
+    fetch(
+      `https://e-grampanchayat-jufy.onrender.com/api/directory/${editData.directoryId}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(editData),
+      }
+    )
       .then(() => {
         fetchDirectory();
         setEditData(null);

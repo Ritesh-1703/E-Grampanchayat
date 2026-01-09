@@ -7,7 +7,7 @@ function CitizenDirectory() {
   const [directory, setDirectory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8082/api/directory") // Adjust API URL as needed
+    fetch("https://e-grampanchayat-jufy.onrender.com/api/directory") // Adjust API URL as needed
       .then((res) => res.json())
       .then((data) => setDirectory(data))
       .catch((error) => console.error("Error fetching directory:", error));

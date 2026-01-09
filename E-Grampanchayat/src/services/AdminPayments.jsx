@@ -10,7 +10,9 @@ const AdminPayments = () => {
 
   const fetchPayments = async () => {
     try {
-      const res = await axios.get("http://localhost:8082/api/payments");
+      const res = await axios.get(
+        "https://e-grampanchayat-jufy.onrender.com/api/payments"
+      );
       setPayments(res.data);
     } catch (error) {
       toast.error("Failed to load payments.");
@@ -19,9 +21,13 @@ const AdminPayments = () => {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:8082/api/payments/${id}/status`, null, {
-        params: { status },
-      });
+      await axios.put(
+        `https://e-grampanchayat-jufy.onrender.com/api/payments/${id}/status`,
+        null,
+        {
+          params: { status },
+        }
+      );
       toast.success(`Payment ${status}`);
       fetchPayments();
     } catch (error) {
@@ -63,7 +69,7 @@ const AdminPayments = () => {
                   <td>{p.paymentDate}</td>
                   <td>
                     <a
-                      href={`http://localhost:8082/api/payments/${p.id}/screenshot`}
+                      href={`https://e-grampanchayat-jufy.onrender.com/api/payments/${p.id}/screenshot`}
                       target="_blank"
                       rel="noreferrer"
                     >

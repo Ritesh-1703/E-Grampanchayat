@@ -21,7 +21,7 @@ const ApplyDeathCertificate = () => {
   const handleSubmit = async () => {
     try {
       await axios.post(
-        "http://localhost:8082/api/death-certificates/apply",
+        "https://e-grampanchayat-jufy.onrender.com/api/death-certificates/apply",
         form
       );
       toast.success("Application submitted!");

@@ -6,18 +6,18 @@ import jakarta.persistence.*;
 public class Directory {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "directory_id")
     private Long directoryId;
     private String category;
     private String name;
-    @Column(name="contact_no")
+    @Column(name = "contact_no")
     private String contactNo;
     private String address;
     private String email;
 
     // Default Constructor
-   
+
     // Getters and Setters
     public Long getDirectoryId() {
         return directoryId;

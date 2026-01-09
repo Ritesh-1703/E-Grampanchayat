@@ -18,11 +18,14 @@ const Login = () => {
     setError(""); // Clear previous errors
 
     try {
-      const response = await fetch("http://localhost:8082/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://e-grampanchayat-jufy.onrender.com/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();

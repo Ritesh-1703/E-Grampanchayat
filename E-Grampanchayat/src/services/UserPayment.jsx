@@ -26,7 +26,10 @@ const UserPayment = () => {
     formData.append("screenshot", file);
 
     try {
-      await axios.post("http://localhost:8082/api/payments/submit", formData);
+      await axios.post(
+        "https://e-grampanchayat-jufy.onrender.com/api/payments/submit",
+        formData
+      );
       toast.success("Payment submitted successfully!");
       setPurpose("");
       setAmount("");

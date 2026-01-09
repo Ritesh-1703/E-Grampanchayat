@@ -5,7 +5,8 @@ import styles from "./AdminCertificate.module.css";
 
 const AdminMarriageCertificate = () => {
   const [applications, setApplications] = useState([]);
-  const apiUrl = "http://localhost:8082/api/marriage-certificates";
+  const apiUrl =
+    "https://e-grampanchayat-jufy.onrender.com/api/marriage-certificates";
 
   const fetchData = async () => {
     try {
